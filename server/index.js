@@ -3,7 +3,7 @@ import cors from "cors";
 import * as bitcoin from "bitcoinjs-lib";
 import * as bip39 from "bip39";
 import BIP32Factory from "bip32";
-import ecc from "tiny-secp256k1";
+import * as ecc from "tiny-secp256k1";
 
 const app = express();
 app.use(cors());
@@ -35,7 +35,6 @@ app.get("/api/wallet", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server rodando na porta ${PORT}`);
+app.listen(3000, () => {
+  console.log("🚀 Server rodando na porta 3000");
 });
