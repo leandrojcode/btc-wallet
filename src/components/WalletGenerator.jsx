@@ -10,7 +10,12 @@ export default function WalletGenerator() {
       setLoading(true);
       setError(null);
 
-      const response = await fetch("http://localhost:3000/api/wallet");
+      const response = await fetch(
+        import.meta.env.PROD
+          ? "https://seu-backend-futuro.com/api/wallet"
+          : "http://localhost:3000/api/wallet"
+      );
+
       const data = await response.json();
 
       setWallet(data);
@@ -50,6 +55,7 @@ export default function WalletGenerator() {
           </div>
         </div>
       )}
+
 
       <footer className="footer">
         <p>
