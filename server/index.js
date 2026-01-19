@@ -1,9 +1,9 @@
-const express = require("express");
-const cors = require("cors");
-const bitcoin = require("bitcoinjs-lib");
-const bip39 = require("bip39");
-const BIP32Factory = require("bip32").default;
-const ecc = require("tiny-secp256k1");
+import express from "express";
+import cors from "cors";
+import * as bitcoin from "bitcoinjs-lib";
+import * as bip39 from "bip39";
+import BIP32Factory from "bip32";
+import ecc from "tiny-secp256k1";
 
 const app = express();
 app.use(cors());
@@ -35,7 +35,7 @@ app.get("/api/wallet", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("🚀 Server rodando em http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server rodando na porta ${PORT}`);
 });
-
