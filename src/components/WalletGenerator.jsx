@@ -12,9 +12,10 @@ export default function WalletGenerator() {
 
       const response = await fetch(
         import.meta.env.PROD
-          ? "https://seu-backend-futuro.com/api/wallet"
+          ? "https://btc-wallet-y251.onrender.com/api/wallet"
           : "http://localhost:3000/api/wallet"
       );
+
 
       const data = await response.json();
 
