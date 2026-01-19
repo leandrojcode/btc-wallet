@@ -1,16 +1,79 @@
-# React + Vite
+# BTC Wallet Generator (Testnet)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Bitcoin HD Wallet Generator built with React, Node.js and modern cryptographic standards (BIP39, BIP32, BIP44).  
+This project generates a deterministic Bitcoin Testnet wallet including mnemonic phrase, address and private key, for educational and development purposes.
 
-Currently, two official plugins are available:
+### Live Demo:  
+Frontend: https://leandrojcode.github.io/btc-wallet  
+Backend API: https://btc-wallet-y251.onrender.com/api/wallet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ACCESS HERE: https://leandrojcode.github.io/btc-wallet/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Generate Bitcoin HD wallets (Testnet)
+- BIP39 mnemonic generation
+- BIP44 derivation path: `m/44'/1'/0'/0/0`
+- Secure key derivation using `tiny-secp256k1`
+- React + Vite frontend
+- Node.js + Express backend
+- Deployed on GitHub Pages (frontend) and Render (backend)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- JavaScript (ESM)
+- GitHub Pages
+
+### Backend
+- Node.js
+- Express
+- bitcoinjs-lib
+- bip39
+- bip32
+- tiny-secp256k1
+- Render Cloud
+
+---
+
+## API Endpoint
+
+### GET /api/wallet
+
+
+Response example:
+
+```json
+{
+  "mnemonic": "mango love amateur beyond paddle become shrug speed inspire know wool confirm",
+  "address": "n43Tp1u2zE1gjUFTQNVDK6GjDFCHajTT8h",
+  "privateKey": "cNR3Usdv53XcABeqK9CRGCvyYYnUmmJf1ChLNtntDKnVVuDJnhNU"
+}
+```
+---
+
+## Security Disclaimer
+
+This application is for educational and development purposes only.
+Do NOT use the generated private keys in production environments or to store real funds.
+
+---
+
+Author
+
+Leandro Jesus <br>
+Fullstack Developer & Web3 Developer
+
+GitHub: https://github.com/leandrojcode <br>
+LinkedIn: https://www.linkedin.com/in/leandrofjesus/
+
+---
+License
+
+MIT License
